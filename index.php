@@ -30,7 +30,7 @@ function __autoload($class_name)
 $result = WebServices::execute($_SERVER['REQUEST_METHOD']);
 
 // If the service answer a good response, display the result encoded in JSON, display an error otherwise
-if (!$result) {
+if (!$result && !is_array($result)) {
     echo 'Bad Request';
 //    http_response_code(400);
 } else {
