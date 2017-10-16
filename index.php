@@ -1,15 +1,15 @@
 <?php
 // Uncomment this to display errors when in dev
-//ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 
 /**
  * Header definition for requests to be passed on the Web Services
- * Allow only GET, POST, PUT and DELETE methods
+ * Allow only GET, POST, PUT, DELETE and OPTIONS methods
  * Specify json as content
  */
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
-header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Origin: http://localhost:8080");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Authorization, Content-Type");
 header('Content-Type: application/json; charset=utf-8');
 
 /**
